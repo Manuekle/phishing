@@ -27,18 +27,18 @@ function Zphisher() {
               Zphisher
             </span>
           </h2>
-          <h1 className="text-2xl font-bold text-center text-white pb-5">
-            Esta herramienta te permite clonar sitios web para realizar
-            phishing como{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
+          <h1 className="text-3xl font-normal text-center text-white pb-5">
+            Esta herramienta te permite clonar sitios web para realizar phishing
+            como{' '}
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
               Facebook
             </span>
             ,{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-red-500 to-yellow-300">
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-red-500 to-yellow-300">
               Instagram
             </span>
             ,{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-300">
+            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-300">
               Netflix
             </span>
             , y muchas mas.

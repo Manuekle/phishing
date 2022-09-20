@@ -22,7 +22,7 @@ function Ngrok() {
               Ngrok
             </span>
           </h2>
-          <h1 className="text-2xl font-bold text-center text-white pb-5">
+          <h1 className="text-3xl font-normal text-center text-white pb-5">
             Esta herramienta te permite crear un túnel seguro entre tú y tu
             equipo, esto te permite acceder a tu equipo desde cualquier lugar
             del mundo, sin necesidad de abrir puertos en tu router.

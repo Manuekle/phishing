@@ -8,7 +8,7 @@ function Tools() {
               Herramientas
             </span>
           </h2>
-          <h1 className="text-2xl font-bold text-center text-white pb-5">
+          <h1 className="text-3xl font-normal text-center text-white pb-5">
             En esta sección encontraras una lista de herramientas que te
             ayudaran a realizar diferentes tareas, desde la creación de phishing
             hasta la creación de payloads para explotar vulnerabilidades.

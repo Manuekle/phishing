@@ -31,7 +31,7 @@ function Metasploit() {
               Metasploit
             </span>
           </h2>
-          <h1 className="text-2xl font-bold text-center text-white pb-5">
+          <h1 className="text-3xl font-normal text-center text-white pb-5">
             Metasploit es una herramienta de código abierto que proporciona a
             los desarrolladores y administradores de sistemas una plataforma
             para desarrollar, probar y explotar vulnerabilidades.

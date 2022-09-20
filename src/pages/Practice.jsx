@@ -30,7 +30,7 @@ function Practice() {
               </span>
             </div>
             <div className="flex flex-col">
-              <p className="text-4xl font-bold text-white text-justify">
+              <p className="text-3xl font-normal text-white text-justify">
                 Kali linux es una distribución de Linux diseñada para la
                 seguridad informática y el pentesting. Es una distribución
                 derivada de Debian y está basada en el kernel Linux. Kali Linux
@@ -45,57 +45,82 @@ function Practice() {
           </div>
           <h2 className="pt-44 text-4xl font-black text-center text-white sm:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
-              Términos de pentesting
+              Vulnerabilidades Informáticas
             </span>
           </h2>
+          <h1 className="text-3xl font-normal text-center text-white pb-5">
+            Se la puede definir como una falencia o debilidad en un sistema
+            informático, el cual coloca en riesgo la seguridad de los activos de
+            la información y compromete la integridad, confidencialidad y
+            disponibilidad de la información; por lo tanto, es importante
+            reconocer, actuar y eliminar la vulnerabilidad encontrada en el
+            menor tiempo posible.
+          </h1>
           <div className="flex flex-col">
             <h1 className="pt-20 text-4xl font-black text-white sm:text-6xl">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-red-400 to-red-500">
-                Ataque tipo Payload:
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-300 via-fuchsia-500 to-fuchsia-100">
+                Tipos de vulnerabilidades:
               </span>
             </h1>
-            <p className="pt-4 text-3xl font-bold text-white">
-              Es un escript bastante simple que nos permite ejecutar un payload
-              en un archivo .apk, para esto debemos tener en cuenta que el
-              payload debe ser compatible con el sistema operativo que se va a
-              ejecutar, en este caso se utilizara un payload de Android.
+            <h1 className="pt-20 text-4xl font-black text-white sm:text-6xl">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-red-400 to-red-500">
+                Ingeniería social:
+              </span>
+            </h1>
+            <p className="pt-4 text-3xl font-normal text-white">
+              Consiste cuando delincuentes informáticos se hacen pasar por otras
+              personas u organizaciones para engañar a usuarios con el objetivo
+              de obtener y robar información o dinero. Ejemplo: spam, phising,
+              etc.
             </p>
           </div>
           <div className="flex flex-col">
             <h1 className="pt-10 text-4xl font-black text-white sm:text-6xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-green-400 to-green-500">
-                Msfvenom:
+                Windows Spoofing:
               </span>
             </h1>
-            <p className="pt-4 text-3xl font-bold text-white">
-              Msfvenom es una herramienta de metasploit que nos permite crear
-              payloads para diferentes sistemas operativos, en este caso se
-              utilizara un payload de Android.
+            <p className="pt-4 text-3xl font-normal text-white">
+              Se presenta cuando se muestran ventanas y mensajes de notificación
+              en el sistema operativo engañando al usuario con sorteos, premios
+              y diferentes tipos de estafas.
             </p>
           </div>
           <div className="flex flex-col">
             <h1 className="pt-10 text-4xl font-black text-white sm:text-6xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500">
-                Msfconsole:
+                Denegación de servicios(DDoS):
               </span>
             </h1>
-            <p className="pt-4 text-3xl font-bold text-white">
-              Es una herramienta de metasploit que nos permite crear un servidor
-              para que el payload se conecte y nos de acceso al dispositivo
-              objetivo.
+            <p className="pt-4 text-3xl font-normal text-white">
+              Se presenta cuando se realiza un ataque para inundar el ancho de
+              banda de la red por un consumo excesivo de este o de recursos
+              conectados al sistema. Su propósito es bloquear el servicio para
+              que los usuarios no puedan utilizarlo.
             </p>
           </div>
           <div className="flex flex-col">
             <h1 className="pt-10 text-4xl font-black text-white sm:text-6xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500">
-                Reverse TCP:
+                SQL Injection:
               </span>
             </h1>
-            <p className="pt-4 text-3xl font-bold text-white">
-              Un payload de tipo reverse_tcp es un payload que se conecta a un
-              servidor que nosotros creamos, para esto debemos tener en cuenta
-              que el puerto que se utiliza para la conexión debe estar abierto
-              en el firewall del dispositivo objetivo.
+            <p className="pt-4 text-3xl font-normal text-white">
+              Se presenta cuando se inserta código o sentencias SQL con el
+              objetivo de alterar el funcionamiento de una base de datos.
+            </p>
+          </div>
+          <div className="flex flex-col">
+            <h1 className="pt-10 text-4xl font-black text-white sm:text-6xl">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-stone-300 via-stone-400 to-stone-500">
+                Cross Site Scripting(XSS):
+              </span>
+            </h1>
+            <p className="pt-4 text-3xl font-normal text-white">
+              Se presenta en los campos de una aplicación web que no están
+              debidamente protegidos y permite ejecutar por los atacantes
+              scripts de lenguajes como JavaScript o VBScript, permitiendo
+              mostrar información y escalar privilegios.
             </p>
           </div>
         </div>

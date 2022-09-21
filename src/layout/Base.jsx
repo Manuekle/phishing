@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Pentesting from '../pages/Pentesting';
 import Phishing from '../pages/Phishing';
 import Practice from '../pages/Practice';
@@ -17,13 +18,13 @@ function Base() {
       <Pentesting />
       <Phishing />
       <Practice />
-      <Exploit />
-      <Tools />
-      <Ngrok />
-      <Scrcpy />
-      <Zphisher />
-      <Seeker />
-      <Metasploit />
+      {/* <Exploit /> */}
+      {/* <Tools /> */}
+      {/* <Ngrok /> */}
+      {/* <Scrcpy /> */}
+      {/* <Zphisher /> */}
+      {/* <Seeker /> */}
+      {/* <Metasploit /> */}
       <Quiz />
       <Footer />
     </div>

@@ -12,7 +12,11 @@ function Quiz() {
   const [answersShow, setAnswersShow] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const [height, setHeight] = useState(0);
+  const [width, setWidth] = useState(0);
+
   function handleAnswerSubmit(isCorrect, e) {
+    // alert(window.innerHeight);
     if (isCorrect) setShowScore(showScore + 1);
     e.target.classList.add(isCorrect ? 'bg-green-500' : 'bg-red-500');
     if (isCorrect) setTime(60);
@@ -26,9 +30,22 @@ function Quiz() {
   }
 
   useEffect(() => {
+    if (window.innerHeight > 1000) {
+      setHeight(1150);
+    } else {
+      setHeight(350);
+    }
+
+    if (window.innerWidth > 1000) {
+      setWidth(400);
+    } else {
+      setWidth(310);
+    }
+
+
     const interval = setInterval(() => {
       if (time > 0) setTime((prev) => prev - 1);
-      if (time === 0) setRunning(true);      
+      if (time === 0) setRunning(true);
       if (time < 12) {
         document.getElementById('timer').classList.add('text-red-500');
       } else {
@@ -40,25 +57,27 @@ function Quiz() {
 
   if (isFinished) {
     return (
-      <section className="w-[100em] pt-4 mx-auto">
-        <div className="space-y-12 md:text-left">
+      <section className="lg:w-[100em] pt-4 mx-auto">
+        <div className="space-y-12 md:text-left px-8 lg:px-0">
           <div className=" space-y-5 sm:mx-auto sm:space-y-4">
-            <h2 className="pt-44 text-4xl font-black text-center text-white sm:text-6xl">
+            <h2 className="pt-10 lg:pt-44 text-3xl font-black text-center text-white sm:text-6xl">
               <span>🎉 </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
                 Quiz de Phishing
               </span>
             </h2>
-            <h1 className="text-3xl text-center font-bold text-white">
+            <h1 className="text-lg lg:text-3xl text-center font-bold text-white">
               Que tan bueno eres en Phishing! <br />
             </h1>
           </div>
-          <div className="rounded-lg border-[3px] mx-56">
+          <div className="rounded-lg border-[3px] p-0 lg:p-8 mx-0 lg:mx-56">
             <div className="flex justify-center relative">
               <Confetti
                 tweenDuration={90000}
-                width={1150}
-                height={400}
+                // width={1150}
+                // height={400}
+                width={width}
+                height={height}
                 initialVelocityY={20}
                 numberOfPieces={1000}
                 recycle={false}
@@ -76,66 +95,69 @@ function Quiz() {
                 }}
               />
             </div>
+
             <div className="flex flex-col items-center p-12">
-              <h1 className="text-center text-4xl font-black text-white sm:text-6xl">
+              <h1 className="text-center text-3xl font-black text-white sm:text-6xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
                   Resultados:
                 </span>
               </h1>
 
               {showScore === 0 ? (
-                <h1 className="pt-2 text-center text-4xl font-black text-white ">
+                <h1 className="pt-2 text-md lg:text-4xl text-center font-black text-white ">
                   Que mal, no has acertado ninguna pregunta.
                 </h1>
               ) : (
                 ''
               )}
               {showScore === 1 ? (
-                <h1 className="pt-2 text-center text-4xl font-black text-white ">
+                <h1 className="pt-2 text-md lg:text-4xl text-center font-black text-white ">
                   Tienes que mejorar, solo has acertado una pregunta.
                 </h1>
               ) : (
                 ''
               )}
               {showScore > 1 && showScore < 5 ? (
-                <h1 className="pt-2 text-center text-4xl font-black text-white ">
+                <h1 className="pt-2 text-md lg:text-4xl text-center font-black text-white ">
                   Buen intento, has acertado {showScore} preguntas.
                 </h1>
               ) : (
                 ''
               )}
               {showScore === 5 ? (
-                <h1 className="pt-2 text-center text-4xl font-black text-white ">
+                <h1 className="pt-2 text-md lg:text-4xl text-center font-black text-white ">
                   Buen trabajo, has acertado {showScore} preguntas.
                 </h1>
               ) : (
                 ''
               )}
               {showScore > 5 && showScore <= 11 ? (
-                <h1 className="pt-2 text-center text-4xl font-black text-white ">
+                <h1 className="pt-2 text-md lg:text-4xl text-center font-black text-white ">
                   Excelente, eres muy bueno, pero puedes mejorar.
                 </h1>
               ) : (
                 ''
               )}
               {showScore === 12 ? (
-                <h1 className="pt-2 text-center text-4xl font-black text-white ">
+                <h1 className="pt-2 text-md lg:text-4xl text-center font-black text-white ">
                   Enhorabuen eres un experto en Phishing!
                 </h1>
               ) : (
                 ''
               )}
-              <p className="pt-4 text-3xl font-bold text-white text-center ">
+              <p className="pt-4 text-md lg:text-3xl font-bold text-white text-center ">
                 Obtuviste {showScore} de {Questions.length}
               </p>
               <button
-                className="py-3 px-12 text-2xl mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl hover:bg-zinc-900 text-white tracking-tighter"
+                className="py-3 px-12 mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl hover:bg-zinc-900 text-white tracking-tighter"
                 onClick={() => (window.location.href = '/')}
               >
-                <a className="font-bold text-xl text-white">Volver a jugar</a>
+                <a className="font-bold text-md lg:text-2xl text-white">
+                  Volver a jugar
+                </a>
               </button>
               <button
-                className="font-bold text-xl text-white pt-6 border-b-2 border-zinc-500 hover:border-zinc-400 tracking-tighter"
+                className="font-bold text-md lg:text-xl text-white pt-6 border-b-2 border-zinc-500 hover:border-zinc-400 tracking-tighter"
                 onClick={() => {
                   setIsFinished(false);
                   setAnswersShow(true);
@@ -221,49 +243,62 @@ function Quiz() {
   }
 
   return (
-    <section className="w-[100em] pt-4 mx-auto">
-      <div className="space-y-12 md:text-left">
+    <section className="lg:w-[100em] pt-4 mx-auto">
+      <div className="space-y-12 md:text-left px-8 lg:px-0">
         <div className=" space-y-5 sm:mx-auto sm:space-y-4">
-          <h2 className="pt-44 text-4xl font-black text-center text-white sm:text-6xl">
+          <h2 className="pt-10 lg:pt-44 text-3xl font-black text-center text-white sm:text-6xl">
             <span>🎉 </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
               Quiz de Phishing
             </span>
           </h2>
-          <h1 className="text-3xl text-center font-bold text-white">
+          <h1 className="text-lg lg:text-3xl text-center font-bold text-white">
             Que tan bueno eres en Phishing! <br />
           </h1>
         </div>
         {open ? (
-          <div className="p-8 rounded-lg border-[3px] mx-56">
-            <div className="flex justify-between items-center">
-              <h1 className="text-3xl font-bold text-white">
+          <div className="p-0 lg:p-8 rounded-lg border-[3px] mx-0 lg:mx-56">
+            <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:p-0 p-4">
+              <h1 className="text-md lg:text-3xl font-bold text-white lg:pt-0 pt-4">
                 Pregunta{' '}
                 <span className="text-yellow-400">{currentQuestion + 1}</span>{' '}
                 de <span className="text-blue-400">{Questions.length}</span>
               </h1>
               <span>
                 {running ? (
-                  <button
-                    className="py-4 px-4 text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl shadow-xl hover:bg-zinc-900 text-white tracking-tighter"
-                    onClick={() => {
-                      setTime(60);
-                      setRunning(false);
-                      setCurrentQuestion(currentQuestion + 1);
-                    }}
-                  >
-                    Siguiente pregunta
-                  </button>
+                  <>
+                    {currentQuestion + 1 === 12 ? (
+                      <button
+                        className="mt-2 lg:mt-0 py-3 lg:py-4 px-4 lg:px-4 text-sm lg:text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl shadow-xl hover:bg-zinc-900 text-white tracking-tighter"
+                        onClick={() => {
+                          setIsFinished(true);
+                        }}
+                      >
+                        Finalizar prueba
+                      </button>
+                    ) : (
+                      <button
+                        className="mt-2 lg:mt-0 py-3 lg:py-4 px-4 lg:px-4 text-sm lg:text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl shadow-xl hover:bg-zinc-900 text-white tracking-tighter"
+                        onClick={() => {
+                          setTime(60);
+                          setRunning(false);
+                          setCurrentQuestion(currentQuestion + 1);
+                        }}
+                      >
+                        Siguiente pregunta
+                      </button>
+                    )}
+                  </>
                 ) : (
-                  <h1 className="text-3xl font-bold text-yellow-300">
+                  <h1 className="text-md lg:text-3xl font-bold text-yellow-300">
                     ⏰ Tiempo Restante: <span id="timer">{time}s</span>
                   </h1>
                 )}
               </span>
             </div>
-            <div className="grid grid-cols-3 pt-20 items-center">
-              <div className="col-span-2 w-[500px]">
-                <h1 className="text-3xl font-bold text-white">
+            <div className="grid grid-cols-3 pt-4 lg:pt-20 items-center px-8 lg:px-0">
+              <div className="col-span-3 lg:col-span-2 lg:w-[500px]">
+                <h1 className="text-md lg:text-3xl font-bold text-white">
                   {Questions[currentQuestion].question}
                 </h1>
                 {Questions[currentQuestion].img === '' ? (
@@ -276,14 +311,14 @@ function Quiz() {
                   />
                 )}
               </div>
-              <div className="col-span-1 flex flex-col gap-4">
+              <div className="lg:pt-0 pt-8 lg:pb-0 pb-8 col-span-3 lg:col-span-1 flex flex-col gap-4">
                 {Questions[currentQuestion].answers.map((answer) => (
                   <button
                     id="block"
                     key={answer.text}
                     disabled={running}
                     onClick={(e) => handleAnswerSubmit(answer.isCorrect, e)}
-                    className="w-full text-white p-2 text-xl font-bold py-3 rounded-lg border-[3px] shadow-md"
+                    className="w-full text-white py-2 px-4 lg:px-4 text-xs lg:text-xl font-bold lg:py-3 rounded-lg border-[3px] shadow-md"
                   >
                     {answer.text}
                   </button>
@@ -292,17 +327,17 @@ function Quiz() {
             </div>
           </div>
         ) : (
-          <div className="p-8 rounded-lg border-[3px] mx-56">
-            <div className="flex flex-col items-center p-12">
-              <h1 className="text-center text-4xl font-black text-white sm:text-6xl">
+          <div className="p-0 lg:p-8 rounded-lg border-[3px] mx-0 lg:mx-56">
+            <div className="flex flex-col items-center lg:p-12 p-8">
+              <h1 className="text-center text-3xl font-black text-white sm:text-6xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
                   Estas listo para jugar?
                 </span>
               </h1>
-              <h1 className="text-2xl font-bold text-white pt-4">
+              <h1 className="text-md lg:text-2xl text-center font-bold text-white pt-4">
                 Se te dara 60 segundos para responder cada pregunta
               </h1>
-              <h1 className="text-2xl font-bold text-white pt-4">
+              <h1 className="text-md lg:text-2xl text-center font-bold text-white pt-4">
                 Demuestra lo que sabes!
               </h1>
 
@@ -314,7 +349,7 @@ function Quiz() {
                 }}
                 className="mt-8 py-3 px-12 bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl shadow-xl hover:bg-zinc-900"
               >
-                <a className="font-bold text-2xl text-white tracking-tighter">
+                <a className="font-bold text-md lg:text-2xl text-white tracking-tighter">
                   Iniciar!
                 </a>
               </button>

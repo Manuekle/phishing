@@ -1,3 +1,5 @@
+import Row from "../assets/row";
+
 function Tools() {
   return (
     <section className="w-full px-10 pt-28 mx-auto max-w-7xl">
@@ -17,6 +19,11 @@ function Tools() {
             <h1 className="font-bold text-5xl text-white">Nmap:</h1>
             <h1 className="font-bold text-5xl text-white">Metasploit:</h1>
           </div> */}
+          <div className="flex flex-col justify-center items-center">
+            <span className="bg-black shadow-black/50 rounded-full p-2 transition delay-75 animate-bounce shadow-lg">
+              <Row className="fill-white" />
+            </span>
+          </div>
         </div>
       </div>
     </section>

@@ -40,6 +40,26 @@ function Phishing() {
           <div className=" space-y-5 sm:mx-auto sm:space-y-4">
             <h2 className="pt-10 text-4xl font-black text-center text-white sm:text-6xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
+                ¿Qué es el Pentesting?
+              </span>
+            </h2>
+          </div>
+          <div className="pt-10">
+            <h1 className="text-white font-normal text-3xl text-justify">
+              Significa test de penetración y consiste en la utilización de
+              técnicas, métodos, herramientas, conocimientos e ingenio de una
+              persona para descubrir fallas y vulnerabilidades mediante la
+              realización de pruebas de penetración en un sistema informático.
+            </h1>
+            <h1 className="pt-4 text-white font-normal text-3xl text-justify">
+              💡
+              <span className="font-bold text-yellow-400">Algo más: </span>Al
+              proceso de pentesting se lo conoce como hacking etico
+            </h1>
+          </div>
+          <div className=" space-y-5 sm:mx-auto sm:space-y-4">
+            <h2 className="pt-10 text-4xl font-black text-center text-white sm:text-6xl">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
                 ¿Qué es phishing?
               </span>
             </h2>

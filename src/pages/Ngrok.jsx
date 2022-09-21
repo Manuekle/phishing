@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 import Copy from '../assets/copy';
 import Check from '../assets/check';
+import Github from '../assets/github';
 function Ngrok() {
   const [copy1, setCopy1] = useState(false);
 
@@ -14,7 +15,7 @@ function Ngrok() {
     }
   }, [copy1]);
   return (
-    <section className="w-full px-10 pt-28 mx-auto max-w-7xl">
+    <section className="w-full px-10 pt-20 mx-auto max-w-7xl">
       <div className="space-y-12 md:text-left">
         <div className=" space-y-5 sm:mx-auto sm:space-y-4">
           <h2 className="pt-10 pb-5 text-4xl font-black text-center text-white sm:text-6xl">
@@ -47,6 +48,18 @@ function Ngrok() {
                 <Copy className="fill-zinc-400" />
               )}
             </button>
+          </div>
+          <div className="flex justify-center pt-4">
+            <a
+              className="flex flex-row gap-4"
+              target="blank"
+              href="https://ngrok.com/"
+            >
+              <Github className="fill-zinc-300" />
+              <h1 className="font-bold text-xl text-white">
+                Documentación Ngrok
+              </h1>
+            </a>
           </div>
         </div>
       </div>

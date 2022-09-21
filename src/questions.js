@@ -63,41 +63,41 @@ const questions = [
     img: '',
     answers: [
       {
-        text: 'Nmap',
+        text: 'nmap',
         isCorrect: true
       },
       {
-        text: 'Aircrack-ng',
+        text: 'Dmitry',
         isCorrect: false
       },
       {
-        text: 'Hydra',
+        text: 'TheHarvester',
         isCorrect: false
       },
       {
-        text: 'John the Ripper',
+        text: 'Nikto',
         isCorrect: false
       }
     ]
   },
   {
-    question: '¿Que herramienta se usa para crear apps maliciosas?',
+    question: '¿Que comando se usa para crear apps maliciosas?',
     img: '',
     answers: [
       {
-        text: 'Metasploit',
+        text: 'metasploit',
         isCorrect: false
       },
       {
-        text: 'Linset',
+        text: 'msfcreate',
         isCorrect: false
       },
       {
-        text: 'Hydra',
+        text: 'msfconsole',
         isCorrect: false
       },
       {
-        text: 'Msfvenom',
+        text: 'msfvenom',
         isCorrect: true
       }
     ]
@@ -185,7 +185,7 @@ const questions = [
     ]
   },
   {
-    question: '¿Qué es el Phishing?',
+    question: '¿Qué tipo de ataque es el phishing?',
     img: 'https://empresas.blogthinkbig.com/wp-content/uploads/2020/11/%C2%BFPor-que-el-sector-financiero-es-mas-vulnerable-a-los-ataques-de-phishing.jpg?fit=1200%2C675',
     answers: [
       {

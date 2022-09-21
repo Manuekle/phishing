@@ -18,7 +18,7 @@ function Ngrok() {
     <section className="w-full px-8 lg:px-10 lg:pt-20 lg:mx-auto lg:max-w-7xl">
       <div className="space-y-12 md:text-left">
         <div className=" space-y-5 sm:mx-auto sm:space-y-4">
-          <h2 className="pt-20 lg:pt-10 lg:pb-5 text-2xl font-black text-center text-white sm:text-6xl">
+          <h2 className="pt-10 lg:pt-10 lg:pb-5 text-2xl font-black text-center text-white sm:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-500 via-slate-600 to-slate-400">
               Ngrok
             </span>

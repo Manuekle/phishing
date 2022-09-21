@@ -15,10 +15,12 @@ function Tools() {
             ayudaran a realizar diferentes tareas, desde la creación de phishing
             hasta la creación de payloads para explotar vulnerabilidades.
           </h1>
-          <div className="flex flex-col justify-center items-center">
-            <span className="bg-black shadow-black/50 rounded-full p-2 transition delay-75 animate-bounce shadow-lg">
-              <Row className="fill-white" />
-            </span>
+          <div className="lg:block hidden">
+            <div className="flex flex-col justify-center items-center">
+              <span className="bg-black shadow-black/50 rounded-full p-2 transition delay-75 animate-bounce shadow-lg">
+                <Row className="fill-white" />
+              </span>
+            </div>
           </div>
         </div>
       </div>

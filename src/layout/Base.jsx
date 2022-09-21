@@ -12,22 +12,25 @@ import Metasploit from '../pages/Metasploit';
 import Quiz from '../pages/Quiz';
 
 import Footer from './Footer';
+
 function Base() {
   return (
-    <div className="bg-zinc-800 h-full">
-      <Pentesting />
-      <Phishing />
-      <Practice />
-      <Exploit />
-      <Tools />
-      <Ngrok />
-      <Scrcpy />
-      <Zphisher />
-      <Seeker />
-      <Metasploit />
-      <Quiz />
-      <Footer />
-    </div>
+    <>
+      <div className="bg-zinc-800 h-full">
+        <Pentesting />
+        <Phishing />
+        <Practice />
+        <Exploit />
+        <Tools />
+        <Ngrok />
+        <Scrcpy />
+        <Zphisher />
+        <Seeker />
+        <Metasploit />
+        <Quiz />
+        <Footer />
+      </div>
+    </>
   );
 }
 

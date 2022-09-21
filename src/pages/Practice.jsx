@@ -1,10 +1,10 @@
+/* eslint-disable import/no-duplicates */
 /* eslint-disable no-unused-vars */
 import Kali from '../assets/kali';
-import Android from '../assets/android';
 
 function Practice() {
   return (
-    <section className="lg:w-[100em] pt-4 mx-auto">
+    <section className="lg:w-[100em] pt-4 lg:mx-auto">
       <div className="space-y-12 md:text-left">
         <div className="space-y-5 sm:mx-auto sm:space-y-4 px-8 lg:px-0">
           <h2 className="pt-20 lg:pt-44 pb-2 lg:pb-20 text-3xl font-black text-center text-white sm:text-6xl">
@@ -12,24 +12,16 @@ function Practice() {
               Taller Práctico de Pentesting
             </span>
           </h2>
-          <div className="flex flex-col gap-8 items-center">
-            {/* <div className="grid grid-cols-3 items-center">
-              <span className="pt-28 pb-28 grid justify-center relative">
-                <div
-                  className="p-56 bg-sky-300 top-[200px] absolute rounded-full left-[40px]"
-                  style={{ filter: 'blur(100px)' }}
-                ></div>
-                <Kali width="900px" className="relative" />
-              </span>
-              <span className="pt-28 pb-28 grid justify-center relative"></span>
-              <span className="pt-28 pb-28 grid justify-center relative">
-                <div
-                  className="p-56 bg-green-300 top-[150px] absolute rounded-full left-[45px]"
-                  style={{ filter: 'blur(100px)' }}
-                ></div>
-                <Android className="relative" />
-              </span>
-            </div> */}
+          <span className="flex justify-center relative lg:pb-0">
+            <div
+              style={{
+                filter: 'blur(100px)'
+              }}
+              className="p-28 lg:p-64 bg-sky-300 lg:top-[150px] absolute rounded-full top-[100px] left-11 lg:left-[545px]"
+            ></div>
+            <Kali className="relative lg:w-[800px] w-[400px] h-[400px] lg:h-[800px]" />
+          </span>
+          <div>
             <div className="flex flex-col">
               <p className="text-lg lg:text-3xl font-normal text-white text-justify">
                 Kali linux es una distribución de Linux diseñada para la

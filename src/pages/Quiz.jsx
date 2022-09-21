@@ -33,7 +33,7 @@ function Quiz() {
     if (window.innerHeight > 1000) {
       setHeight(1150);
     } else {
-      setHeight(350);
+      setHeight(360);
     }
 
     if (window.innerWidth > 1000) {
@@ -41,7 +41,6 @@ function Quiz() {
     } else {
       setWidth(310);
     }
-
 
     const interval = setInterval(() => {
       if (time > 0) setTime((prev) => prev - 1);
@@ -176,39 +175,39 @@ function Quiz() {
 
   if (answersShow) {
     return (
-      <section className="w-[100em] pt-4 mx-auto">
-        <div className="space-y-12 md:text-left">
+      <section className="lg:w-[100em] pt-4 mx-auto">
+        <div className="space-y-12 md:text-left px-8 lg:px-0">
           <div className=" space-y-5 sm:mx-auto sm:space-y-4">
-            <h2 className="pt-44 text-4xl font-black text-center text-white sm:text-6xl">
+            <h2 className="pt-10 lg:pt-44 text-3xl font-black text-center text-white sm:text-6xl">
               <span>🎉 </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
                 Quiz de Phishing
               </span>
             </h2>
-            <h1 className="text-3xl text-center font-bold text-white">
+            <h1 className="text-lg lg:text-3xl text-center font-bold text-white">
               Que tan bueno eres en Phishing! <br />
             </h1>
           </div>
-          <div className="p-2 rounded-lg border-[3px] mx-56">
-            <div className="flex justify-between items-center p-12">
-              <h1 className="text-center text-4xl font-black text-white sm:text-6xl">
+          <div className="rounded-lg border-[3px] p-0 lg:p-8 mx-0 lg:mx-56">
+            <div className="flex flex-col lg:flex-row lg:justify-between items-center p-6 lg:p-12">
+              <h1 className="text-center text-3xl font-black text-white sm:text-6xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
                   Respuestas:
                 </span>
               </h1>
-              <h1 className="text-3xl font-bold text-white">
+              <h1 className="text-lg lg:text-3xl font-bold text-white">
                 Pregunta{' '}
                 <span className="text-yellow-400">{currentQuestion + 1}</span>{' '}
                 de <span className="text-blue-400">{Questions.length}</span>
               </h1>
             </div>
-            <div className="flex justify-between items-center px-12 pb-12">
-              <div className="flex flex-col gap-8">
-                <h1 className="text-white font-bold text-2xl w-[600px]">
+            <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:px-12 pb-12">
+              <div className="flex flex-col gap-8 lg:px-0 px-8">
+                <h1 className="text-white font-bold text-lg lg:text-2xl text-justify lg:w-[600px]">
                   {Questions[currentQuestion].question}
                 </h1>
                 <h1>
-                  <span className="text-green-500 font-bold text-2xl ">
+                  <span className="text-green-500 font-bold text-lg lg:text-2xl ">
                     {
                       Questions[currentQuestion].answers.filter(
                         (option) => option.isCorrect
@@ -226,9 +225,9 @@ function Quiz() {
                       setCurrentQuestion(currentQuestion + 1);
                     }
                   }}
-                  className="py-3 w-56 text-2xl mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl hover:bg-zinc-900 text-white tracking-tighter"
+                  className="py-3 w-56 mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl hover:bg-zinc-900 text-white tracking-tighter"
                 >
-                  <a className="font-bold text-xl text-white">
+                  <a className="font-bold text-md lg:text-2xl text-white">
                     {currentQuestion === Questions.length - 1
                       ? 'Volver a jugar'
                       : 'Siguiente'}

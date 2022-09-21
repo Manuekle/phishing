@@ -18,13 +18,13 @@ function Base() {
       <Pentesting />
       <Phishing />
       <Practice />
-      {/* <Exploit /> */}
-      {/* <Tools /> */}
-      {/* <Ngrok /> */}
-      {/* <Scrcpy /> */}
-      {/* <Zphisher /> */}
-      {/* <Seeker /> */}
-      {/* <Metasploit /> */}
+      <Exploit />
+      <Tools />
+      <Ngrok />
+      <Scrcpy />
+      <Zphisher />
+      <Seeker />
+      <Metasploit />
       <Quiz />
       <Footer />
     </div>

@@ -289,7 +289,7 @@ function Phishing() {
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
                         Por Correo Electronico
                       </h1>
-                      <p className="font-bold text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-center">
                         Contiene enlaces que redirigen a sitios falsos o tienen
                         archivos adjuntos que contienen malware.
                       </p>
@@ -310,7 +310,7 @@ function Phishing() {
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
                         Vishing
                       </h1>
-                      <p className="font-bold text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-center">
                         Se realiza a travez de llamaadas telefonicas, con el
                         objetivo de obtener informacion personal o bancaria.
                       </p>
@@ -331,7 +331,7 @@ function Phishing() {
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
                         Smishing
                       </h1>
-                      <p className="font-bold text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-center">
                         Se realiza a travez de mensajes de texto, con el
                         objetivo de que la victima haga click en un enlace.
                       </p>
@@ -352,7 +352,7 @@ function Phishing() {
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
                         Por Redes Sociales
                       </h1>
-                      <p className="font-bold text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-center">
                         Creacion de perfiles falsos y se utilizan para engañar a
                         las victimas.
                       </p>
@@ -395,7 +395,7 @@ function Phishing() {
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
                         Por Correo Electronico
                       </h1>
-                      <p className="font-bold text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-center">
                         Contiene enlaces que redirigen a sitios falsos o tienen
                         archivos adjuntos que contienen malware.
                       </p>
@@ -416,7 +416,7 @@ function Phishing() {
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
                         Vishing
                       </h1>
-                      <p className="font-bold text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-center">
                         Se realiza a travez de llamaadas telefonicas, con el
                         objetivo de obtener informacion personal o bancaria.
                       </p>
@@ -437,7 +437,7 @@ function Phishing() {
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
                         Smishing
                       </h1>
-                      <p className="font-bold text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-center">
                         Se realiza a travez de mensajes de texto, con el
                         objetivo de que la victima haga click en un enlace.
                       </p>
@@ -458,7 +458,7 @@ function Phishing() {
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
                         Por Redes Sociales
                       </h1>
-                      <p className="font-bold text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-center">
                         Creacion de perfiles falsos y se utilizan para engañar a
                         las victimas.
                       </p>

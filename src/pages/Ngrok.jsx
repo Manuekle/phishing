@@ -31,6 +31,11 @@ function Ngrok() {
           <div className=" bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
             <code className="text-white text-sm lg:text-xl">
               <span className="text-zinc-500">
+                # Crear cuenta en ngrok
+              </span>
+              <br />$ ngrok config add-authtoken mytoken
+              <br />
+              <span className="text-zinc-500">
                 # El puerto es personalizable
               </span>
               <br />$ ngrok http 80

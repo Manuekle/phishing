@@ -296,13 +296,13 @@ function Phases() {
           <div className=" bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
             <code className="text-white text-sm lg:text-xl">
               <span className="text-zinc-500"># Buscar Subdominios</span>
-              <br />$ Nikto -h hackthissite.org
+              <br />$ nikto -h hackthissite.org
             </code>
             <div className="lg:block hidden">
               <button
                 onClick={() => {
                   setCopy8(true);
-                  navigator.clipboard.writeText('Nikto -h hackthissite.org');
+                  navigator.clipboard.writeText('nikto -h hackthissite.org');
                 }}
                 className="hover:bg-zinc-700 p-2 rounded-lg transition duration-0 hover:duration-150 delay-100"
               >
@@ -317,14 +317,14 @@ function Phases() {
           <div className=" bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
             <code className="text-white text-sm lg:text-xl">
               <span className="text-zinc-500"># Buscar Subdominios</span>
-              <br />$ Nikto -h hackthissite.org -p Puerto
+              <br />$ nikto -h hackthissite.org -p Puerto
             </code>
             <div className="lg:block hidden">
               <button
                 onClick={() => {
                   setCopy9(true);
                   navigator.clipboard.writeText(
-                    'Nikto -h hackthissite.org -p '
+                    'nikto -h hackthissite.org -p '
                   );
                 }}
                 className="hover:bg-zinc-700 p-2 rounded-lg transition duration-0 hover:duration-150 delay-100"

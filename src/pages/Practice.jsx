@@ -4,7 +4,7 @@ import Kali from '../assets/kali';
 
 function Practice() {
   return (
-    <section className="lg:w-[100em] pt-4 lg:mx-auto">
+    <section id="practice" className="lg:w-[100em] pt-4 lg:mx-auto">
       <div className="space-y-12 md:text-left">
         <div className="space-y-5 sm:mx-auto sm:space-y-4 px-8 lg:px-0">
           <h2 className="pt-20 lg:pt-44 pb-2 lg:pb-20 text-3xl font-black text-center text-white sm:text-6xl">

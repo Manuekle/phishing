@@ -16,7 +16,7 @@ function Quiz() {
   const [width, setWidth] = useState(0);
 
   function handleAnswerSubmit(isCorrect, e) {
-    // alert(window.innerHeight);
+    // alert('width: ' + innerWidth + ' height: ' + window.innerHeight);
     if (isCorrect) setShowScore(showScore + 1);
     e.target.classList.add(isCorrect ? 'bg-green-500' : 'bg-red-500');
     if (isCorrect) setTime(60);
@@ -31,13 +31,13 @@ function Quiz() {
 
   useEffect(() => {
     if (window.innerHeight > 1000) {
-      setHeight(1150);
+      setHeight(400);
     } else {
       setHeight(360);
     }
 
     if (window.innerWidth > 1000) {
-      setWidth(400);
+      setWidth(1100);
     } else {
       setWidth(310);
     }
@@ -69,7 +69,7 @@ function Quiz() {
               Que tan bueno eres en Phishing! <br />
             </h1>
           </div>
-          <div className="rounded-lg border-[3px] p-0 lg:p-8 mx-0 lg:mx-56">
+          <div className="rounded-lg border-[3px] p-0 lg:p-0 mx-0 lg:mx-56">
             <div className="flex justify-center relative">
               <Confetti
                 tweenDuration={90000}
@@ -242,7 +242,7 @@ function Quiz() {
   }
 
   return (
-    <section className="lg:w-[100em] pt-4 mx-auto">
+    <section id="quiz" className="lg:w-[100em] pt-4 mx-auto">
       <div className="space-y-12 md:text-left px-8 lg:px-0">
         <div className=" space-y-5 sm:mx-auto sm:space-y-4">
           <h2 className="pt-10 lg:pt-44 text-3xl font-black text-center text-white sm:text-6xl">

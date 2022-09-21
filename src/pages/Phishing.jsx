@@ -472,7 +472,7 @@ function Phishing() {
           <div className="lg:hidden block pt-0 lg:pt-10 px-8 lg:px-0"></div>
         </div>
       </section>
-      <section className="relative w-full bg-gradient-to-r from-shad-yellow-100 via-shad-yellow-100 to-shad-orange-100 pb-24">
+      <section id="jigsaw" className="relative w-full bg-gradient-to-r from-shad-yellow-100 via-shad-yellow-100 to-shad-orange-100 pb-24">
         <div className="lg:flex lg:justify-center">
           <div className="flex flex-col pt-8 lg:pt-20 px-8 lg:px-0">
             <h1 className="font-bold text-zinc-800 text-2xl lg:text-5xl text-center uppercase tracking-wider">

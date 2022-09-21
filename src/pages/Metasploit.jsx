@@ -251,18 +251,7 @@ function Metasploit() {
               la importancia de las vulnerabilidades encontradas y los riesgos
               que conllevan la no corrección o reparación de las mismas.
             </h1>
-            <div>
-              <h2 className="lg:pt-10 pb-10 text-2xl font-black text-white sm:text-6xl">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-200">
-                  Informe Ejecutivo:
-                </span>
-              </h2>
-              <h2 className="lg:pt-10 pb-10 text-2xl font-black text-white sm:text-6xl">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-blue-200">
-                  Informe Técnico:
-                </span>
-              </h2>
-            </div>
+            
           </div>
         </div>
       </div>

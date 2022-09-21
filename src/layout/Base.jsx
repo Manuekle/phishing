@@ -9,9 +9,11 @@ import Zphisher from '../pages/Zphisher';
 import Seeker from '../pages/Seeker';
 import Metasploit from '../pages/Metasploit';
 import Quiz from '../pages/Quiz';
+
+import Footer from './Footer';
 function Base() {
   return (
-    <div className="bg-zinc-800 h-full pb-96">
+    <div className="bg-zinc-800 h-full">
       <Pentesting />
       <Phishing />
       <Practice />
@@ -23,6 +25,7 @@ function Base() {
       <Seeker />
       <Metasploit />
       <Quiz />
+      <Footer />
     </div>
   );
 }

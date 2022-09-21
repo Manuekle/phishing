@@ -59,8 +59,8 @@ function Quiz() {
                 tweenDuration={90000}
                 width={1150}
                 height={400}
-                initialVelocityY={15}
-                numberOfPieces={2000}
+                initialVelocityY={20}
+                numberOfPieces={1000}
                 recycle={false}
                 // wind={0.1}
                 drawShape={(ctx) => {

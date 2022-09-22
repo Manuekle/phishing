@@ -19,11 +19,11 @@ function Quiz() {
     // alert('width: ' + innerWidth + ' height: ' + window.innerHeight);
     if (isCorrect) setShowScore(showScore + 1);
     e.target.classList.add(isCorrect ? 'bg-green-500' : 'bg-red-500');
-    if (isCorrect) setTime(60);
     setTimeout(() => {
       if (currentQuestion === Questions.length - 1) {
         setIsFinished(true);
       } else {
+        if (isCorrect) setTime(60);
         setCurrentQuestion(currentQuestion + 1);
       }
     }, 500);

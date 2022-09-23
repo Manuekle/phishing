@@ -45,7 +45,7 @@ function Phases() {
     <section className="w-full lg:px-10 lg:pt-28 lg:mx-auto lg:max-w-7xl">
       <div className="space-y-12 md:text-left">
         {/* fase 1 */}
-        <div className=" space-y-5 sm:mx-auto sm:space-y-4">
+        <div id="phase1" className=" space-y-5 sm:mx-auto sm:space-y-4">
           <h2 className="lg:pt-10 pb-5 text-2xl font-black text-center text-white sm:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-amber-200">
               Fase 1: Recolección de información
@@ -272,7 +272,7 @@ function Phases() {
           </div>
         </div>
         {/* fase 2 */}
-        <div className="lg:pt-20 space-y-5 sm:mx-auto sm:space-y-4">
+        <div id="phase2" className="lg:pt-20 space-y-5 sm:mx-auto sm:space-y-4">
           <h2 className="pt-10 lg:pb-5 text-2xl font-black text-center text-white sm:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-amber-200">
               Fase 2: Análisis de vulnerabilidades
@@ -339,7 +339,7 @@ function Phases() {
           </div>
         </div>
         {/* fase 3 */}
-        <div className="lg:pt-20 space-y-5 sm:mx-auto sm:space-y-4">
+        <div id="phase3"  className="lg:pt-20 space-y-5 sm:mx-auto sm:space-y-4">
           <h2 className="pt-10 lg:pb-5 text-2xl font-black text-center text-white sm:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-amber-200">
               Fase 3: Explotación de vulnerabilidades

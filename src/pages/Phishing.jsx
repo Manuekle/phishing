@@ -55,7 +55,7 @@ function Phishing() {
             <h1 className="pt-4 text-white font-normal text-lg lg:text-3xl text-justify px-8 lg:px-0">
               💡
               <span className="font-bold text-yellow-400">Algo más: </span>Al
-              proceso de pentesting se lo conoce como hacking etico
+              proceso de pentesting se lo conoce como hacking ético
             </h1>
           </div>
           <div className=" space-y-5 sm:mx-auto sm:space-y-4">
@@ -67,10 +67,10 @@ function Phishing() {
           </div>
           <div className="pt-0 lg:pt-10 px-8 lg:px-0">
             <h1 className="text-white font-normal text-lg lg:text-3xl text-justify">
-              A travez del <span className="font-bold">phishing</span> se lanza
+              A través del <span className="font-bold">phishing</span> se lanza
               un ataque con fines fraudolentos a millones de usuarios,
               principalmente por medio del{' '}
-              <span className="font-bold">correo electronico</span>. De todos
+              <span className="font-bold">correo electrónico</span>. De todos
               ellos algunos caen en la trampa y entregan sus datos.
             </h1>
           </div>
@@ -172,7 +172,7 @@ function Phishing() {
               robar identidad, etc.
             </h1>
             <h1 className="pt-6 lg:pt-12 font-bold text-xl lg:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-400">
-              Una de las formas más faciles de hacer un ataque de phishing es
+              Una de las formas más fáciles de hacer un ataque de phishing es
               con esta herramienta
             </h1>
             <div className="flex flex-row gap-8 pt-8">
@@ -201,7 +201,7 @@ function Phishing() {
                       Espionaje industrial, robo de información confidencial.
                     </li>
                     <li className="font-bold text-[21px] text-white">
-                      Instalacion de malware o software malicioso.
+                      Instalación de malware o software malicioso.
                     </li>
                     <li className="font-bold text-[21px] text-white">
                       Ataques a sitios web.
@@ -245,7 +245,7 @@ function Phishing() {
                       Espionaje industrial, robo de información confidencial.
                     </li>
                     <li className="font-bold text-md text-white">
-                      Instalacion de malware o software malicioso.
+                      Instalación de malware o software malicioso.
                     </li>
                     <li className="font-bold text-md text-white">
                       Ataques a sitios web.
@@ -287,7 +287,7 @@ function Phishing() {
                         </span>
                       </div>
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
-                        Por Correo Electronico
+                        Por Correo Electrónico
                       </h1>
                       <p className="font-normal text-white text-xl text-center">
                         Contiene enlaces que redirigen a sitios falsos o tienen
@@ -311,8 +311,8 @@ function Phishing() {
                         Vishing
                       </h1>
                       <p className="font-normal text-white text-xl text-center">
-                        Se realiza a travez de llamaadas telefonicas, con el
-                        objetivo de obtener informacion personal o bancaria.
+                        Se realiza a través de llamadas telefónicas, con el
+                        objetivo de obtener información personal o bancaria.
                       </p>
                     </div>
                     <div className="flex flex-col w-[300px] border-[3px] p-4 rounded-lg">
@@ -332,7 +332,7 @@ function Phishing() {
                         Smishing
                       </h1>
                       <p className="font-normal text-white text-xl text-center">
-                        Se realiza a travez de mensajes de texto, con el
+                        Se realiza a través de mensajes de texto, con el
                         objetivo de que la victima haga click en un enlace.
                       </p>
                     </div>
@@ -353,7 +353,7 @@ function Phishing() {
                         Por Redes Sociales
                       </h1>
                       <p className="font-normal text-white text-xl text-center">
-                        Creacion de perfiles falsos y se utilizan para engañar a
+                        Creación de perfiles falsos y se utilizan para engañar a
                         las victimas.
                       </p>
                     </div>
@@ -393,7 +393,7 @@ function Phishing() {
                         </span>
                       </div>
                       <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
-                        Por Correo Electronico
+                        Por Correo Electrónico
                       </h1>
                       <p className="font-normal text-white text-xl text-center">
                         Contiene enlaces que redirigen a sitios falsos o tienen
@@ -417,8 +417,8 @@ function Phishing() {
                         Vishing
                       </h1>
                       <p className="font-normal text-white text-xl text-center">
-                        Se realiza a travez de llamaadas telefonicas, con el
-                        objetivo de obtener informacion personal o bancaria.
+                        Se realiza a través de llamadas telefónicas, con el
+                        objetivo de obtener información personal o bancaria.
                       </p>
                     </div>
                     <div className="flex flex-col w-[300px] border-[3px] p-4 rounded-lg">
@@ -438,7 +438,7 @@ function Phishing() {
                         Smishing
                       </h1>
                       <p className="font-normal text-white text-xl text-center">
-                        Se realiza a travez de mensajes de texto, con el
+                        Se realiza a través de mensajes de texto, con el
                         objetivo de que la victima haga click en un enlace.
                       </p>
                     </div>
@@ -459,7 +459,7 @@ function Phishing() {
                         Por Redes Sociales
                       </h1>
                       <p className="font-normal text-white text-xl text-center">
-                        Creacion de perfiles falsos y se utilizan para engañar a
+                        Creación de perfiles falsos y se utilizan para engañar a
                         las victimas.
                       </p>
                     </div>
@@ -472,7 +472,10 @@ function Phishing() {
           <div className="lg:hidden block pt-0 lg:pt-10 px-8 lg:px-0"></div>
         </div>
       </section>
-      <section id="jigsaw" className="relative w-full bg-gradient-to-r from-shad-yellow-100 via-shad-yellow-100 to-shad-orange-100 pb-24">
+      <section
+        id="jigsaw"
+        className="relative w-full bg-gradient-to-r from-shad-yellow-100 via-shad-yellow-100 to-shad-orange-100 pb-24"
+      >
         <div className="lg:flex lg:justify-center">
           <div className="flex flex-col pt-8 lg:pt-20 px-8 lg:px-0">
             <h1 className="font-bold text-zinc-800 text-2xl lg:text-5xl text-center uppercase tracking-wider">
@@ -486,10 +489,10 @@ function Phishing() {
                   className="relative object-cover w-56 lg:w-72"
                 />
                 <h1 className="text-xl lg:text-2xl text-center text-black font-bold">
-                  Correos electronicos dudosos
+                  Correos electrónicos dudosos
                 </h1>
                 <p className="pt-2 text-black text-lg lg:text-xl font-normal text-center lg:text-justify">
-                  No abras correos electronicos que no esperes o que no hayas
+                  No abras correos electrónicos que no esperes o que no hayas
                   solicitado.
                 </p>
               </div>

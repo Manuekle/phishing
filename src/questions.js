@@ -15,7 +15,7 @@ const questions = [
     ]
   },
   {
-    question: '¿De que distribucion esta basada Kali Linux?',
+    question: '¿De que distribución esta basada Kali Linux?',
     img: 'https://gfsistemas.com/wp-content/uploads/2020/08/kali-linux-2020.png',
     answers: [
       {
@@ -45,7 +45,7 @@ const questions = [
         isCorrect: false
       },
       {
-        text: 'Phishing por correo electronico',
+        text: 'Phishing por correo electrónico',
         isCorrect: true
       },
       {

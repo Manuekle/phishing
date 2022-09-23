@@ -239,7 +239,10 @@ function Metasploit() {
               </button>
             </div>
           </div>
-          <div className="lg:pt-20 space-y-5 sm:mx-auto sm:space-y-4">
+          <div
+            id="phase4"
+            className="lg:pt-20 space-y-5 sm:mx-auto sm:space-y-4"
+          >
             <h2 className="pt-10 pb-5 text-2xl font-black text-center text-white sm:text-6xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-amber-200">
                 Fase 4: Informes de resultados
@@ -251,7 +254,6 @@ function Metasploit() {
               la importancia de las vulnerabilidades encontradas y los riesgos
               que conllevan la no corrección o reparación de las mismas.
             </h1>
-            
           </div>
         </div>
       </div>

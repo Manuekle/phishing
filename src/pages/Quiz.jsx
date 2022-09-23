@@ -19,26 +19,25 @@ function Quiz() {
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
 
+  const fetchResults = async () => {
+    const { data, error } = await supabase
+      .from('results')
+      .insert([{ name: player, result: showScore }])
+      .then((res) => {
+        console.log(res);
+      });
+    if (error) console.log(error);
+    console.log(data);
+  };
+
+
   function handleAnswerSubmit(isCorrect, e) {
-    // alert('width: ' + innerWidth + ' height: ' + window.innerHeight);
     if (isCorrect) setShowScore(showScore + 1);
     e.target.classList.add(isCorrect ? 'bg-green-500' : 'bg-red-500');
     setTimeout(() => {
       if (currentQuestion === Questions.length - 1) {
-        // try {
-        //   supabase
-        //     .from('results')
-        //     .insert([{ name: player, result: showScore }])
-        //     .then((res) => {
-        //       console.log(res);
-        //     })
-        //     .catch((err) => {
-        //       console.log(err);
-        //     });
-        // } catch (err) {
-        //   console.log(err);
-        // }
         setIsFinished(true);
+        fetchResults();
       } else {
         setCurrentQuestion(currentQuestion + 1);
         setTime(60);
@@ -59,42 +58,13 @@ function Quiz() {
       setWidth(310);
     }
 
-    if (isFinished) {
-      // const fetchResults = async () => {
-      //   const { data, error } = await supabase
-      //     .from('results')
-      //     .insert([{ name: player, result: showScore }])
-      //     .then((res) => {
-      //       console.log(res);
-      //       setPlayer('');
-      //       setShowScore(0);
-      //     });
-      //   if (error) console.log(error);
-      //   console.log(data);
-      // };
-      // fetchResults();
-      try {
-        supabase
-          .from('results')
-          .insert([{ name: player, result: showScore }])
-          .then((res) => {
-            console.log(res);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      } catch (err) {
-        console.log(err);
-      }
-    }
-
     const interval = setInterval(() => {
       if (time > 0) setTime((prev) => prev - 1);
       if (time === 0) setRunning(true);
       if (time < 12) {
-        document.getElementById('timer').classList.add('text-red-500');
+        // document.getElementById('timer').classList.add('text-red-500');
       } else {
-        document.getElementById('timer').classList.remove('text-red-500');
+        // document.getElementById('timer').classList.remove('text-red-500');
       }
     }, 1000);
     return () => clearInterval(interval);
@@ -317,6 +287,7 @@ function Quiz() {
                         className="mt-2 lg:mt-0 py-3 lg:py-4 px-4 lg:px-4 text-sm lg:text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-800/80 rounded-xl shadow-xl hover:bg-zinc-800 text-white tracking-tighter"
                         onClick={() => {
                           setIsFinished(true);
+                          fetchResults();
                         }}
                       >
                         Finalizar prueba
@@ -362,7 +333,9 @@ function Quiz() {
                     id="block"
                     key={answer.text}
                     disabled={running}
-                    onClick={(e) => handleAnswerSubmit(answer.isCorrect, e)}
+                    onClick={(e) => {
+                      handleAnswerSubmit(answer.isCorrect, e);
+                    }}
                     className="w-full text-white py-2 px-4 lg:px-4 text-xs lg:text-xl font-bold lg:py-3 rounded-lg bg-zinc-800 shadow-md"
                   >
                     {answer.text}

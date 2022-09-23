@@ -40,8 +40,11 @@ function Results() {
               Lista de resultados
             </span>
           </h2>
+          <h1 className="text-lg lg:text-3xl text-center font-bold text-white">
+            Lista de los mejores puntajes
+          </h1>
         </div>
-        <div className="overflow-y-auto relative p-0 lg:p-8 rounded-lg bg-zinc-900 mx-0 lg:mx-[500px] shadow-xl h-96 lg:h-[700px]">
+        <div className="overflow-y-auto relative p-0 lg:p-8 rounded-lg bg-zinc-900 mx-0 lg:mx-[500px] shadow-xl h-96 lg:h-[700px] no-scrollbar">
           <div className="flex flex-col items-center lg:p-12 p-8">
             {results.length === 0 ? (
               <div className="flex flex-col items-center">

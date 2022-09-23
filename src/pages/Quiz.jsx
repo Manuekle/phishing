@@ -5,6 +5,8 @@ import Confetti from 'react-confetti';
 
 import { supabase } from '../clients';
 
+import ReactStars from 'react-rating-stars-component';
+
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(0);
@@ -16,8 +18,14 @@ function Quiz() {
 
   const [player, setPlayer] = useState('');
 
+  const [calification, setCalification] = useState(false);
+
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
+
+  const [star, setStar] = useState(0);
+
+  const [stars, setStars] = useState(4);
 
   const fetchResults = async () => {
     const { data, error } = await supabase
@@ -30,14 +38,12 @@ function Quiz() {
     console.log(data);
   };
 
-
   function handleAnswerSubmit(isCorrect, e) {
     if (isCorrect) setShowScore(showScore + 1);
     e.target.classList.add(isCorrect ? 'bg-green-500' : 'bg-red-500');
     setTimeout(() => {
       if (currentQuestion === Questions.length - 1) {
-        setIsFinished(true);
-        fetchResults();
+        setCalification(true);
       } else {
         setCurrentQuestion(currentQuestion + 1);
         setTime(60);
@@ -48,13 +54,17 @@ function Quiz() {
   useEffect(() => {
     if (window.innerHeight > 1000) {
       setHeight(400);
+      setStar(100);
     } else {
+      setStar(30);
       setHeight(360);
     }
 
     if (window.innerWidth > 1000) {
       setWidth(1150);
+      setStar(100);
     } else {
+      setStar(30);
       setWidth(310);
     }
 
@@ -62,13 +72,22 @@ function Quiz() {
       if (time > 0) setTime((prev) => prev - 1);
       if (time === 0) setRunning(true);
       if (time < 12) {
-        // document.getElementById('timer').classList.add('text-red-500');
+        document.getElementById('timer').classList.add('text-red-500');
       } else {
-        // document.getElementById('timer').classList.remove('text-red-500');
+        document.getElementById('timer').classList.remove('text-red-500');
       }
     }, 1000);
     return () => clearInterval(interval);
   }, [time]);
+
+  const example = {
+    size: star,
+    color2: '#ebc015',
+    value: stars,
+    onChange: (newValue) => {
+      setStars(newValue);
+    }
+  };
 
   if (isFinished) {
     return (
@@ -257,6 +276,53 @@ function Quiz() {
     );
   }
 
+  if (calification) {
+    return (
+      <section className="lg:w-[100em] pt-4 mx-auto">
+        <div className="space-y-12 md:text-left px-8 lg:px-0">
+          <div className=" space-y-5 sm:mx-auto sm:space-y-4">
+            <h2 className="pt-10 lg:pt-44 text-3xl font-black text-center text-white sm:text-6xl">
+              <span>🎉 </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-500 to-blue-100">
+                Quiz de Phishing
+              </span>
+            </h2>
+            <h1 className="text-lg lg:text-3xl text-center font-bold text-white">
+              Que tan bueno eres en Phishing! <br />
+            </h1>
+          </div>
+          <div className="rounded-lg bg-zinc-900 p-0 lg:p-0 mx-0 lg:mx-56">
+            <div className="flex flex-col items-center p-12">
+              <h1 className="text-center text-2xl font-black text-white sm:text-6xl">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
+                  Que calificación nos das?
+                </span>
+              </h1>
+              <h1 className="text-md lg:text-2xl text-center font-bold text-white pt-4">
+                Tu opinión es muy importante para nosotros!
+              </h1>
+              <div>
+                <ReactStars {...example} />
+              </div>
+              <button
+                className="py-3 px-12 mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-800/80 rounded-xl hover:bg-zinc-800 text-white tracking-tighter"
+                onClick={() => {
+                  console.log('hola');
+                  setIsFinished(true);
+                  fetchResults();
+                }}
+              >
+                <a className="font-bold text-md lg:text-2xl text-white">
+                  Finalizar Quiz
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="quiz" className="lg:w-[100em] pt-4 mx-auto">
       <div className="space-y-12 md:text-left px-8 lg:px-0">
@@ -287,7 +353,6 @@ function Quiz() {
                         className="mt-2 lg:mt-0 py-3 lg:py-4 px-4 lg:px-4 text-sm lg:text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-800/80 rounded-xl shadow-xl hover:bg-zinc-800 text-white tracking-tighter"
                         onClick={() => {
                           setIsFinished(true);
-                          fetchResults();
                         }}
                       >
                         Finalizar prueba
@@ -358,6 +423,7 @@ function Quiz() {
               <h1 className="text-md lg:text-2xl text-center font-bold text-white pt-4">
                 Demuestra lo que sabes!
               </h1>
+
               <input
                 type="text"
                 maxLength="10"

@@ -45,12 +45,12 @@ const questions = [
         isCorrect: false
       },
       {
-        text: 'Phishing por correo electrónico',
-        isCorrect: true
+        text: 'Phishing por teléfono',
+        isCorrect: false
       },
       {
-        text: 'Phishing por telefono',
-        isCorrect: false
+        text: 'Phishing por correo electrónico',
+        isCorrect: true
       },
       {
         text: 'Phishing por red social',
@@ -112,12 +112,12 @@ const questions = [
         isCorrect: false
       },
       {
-        text: 'Usar redes wifi publicas de confianza',
-        isCorrect: true
-      },
-      {
         text: 'Usar redes wifi publicas sin ningun tipo de precaucion',
         isCorrect: false
+      },
+      {
+        text: 'Usar redes wifi publicas de confianza',
+        isCorrect: true
       },
       {
         text: 'Usar redes wifi publicas con total confianza',
@@ -130,6 +130,10 @@ const questions = [
     img: 'https://www.cloudways.com/blog/wp-content/uploads/clone-website.jpg',
     answers: [
       {
+        text: 'Zphisher',
+        isCorrect: true
+      },
+      {
         text: 'Wifite',
         isCorrect: false
       },
@@ -140,10 +144,6 @@ const questions = [
       {
         text: 'Wifijammer',
         isCorrect: false
-      },
-      {
-        text: 'Zphisher',
-        isCorrect: true
       }
     ]
   },
@@ -193,22 +193,22 @@ const questions = [
         isCorrect: false
       },
       {
-        text: 'Es un ataque de ingeniería social',
-        isCorrect: true
-      },
-      {
         text: 'Es un ataque de fuerza bruta',
         isCorrect: false
       },
       {
         text: 'Es un ataque de diccionario',
         isCorrect: false
+      },
+      {
+        text: 'Es un ataque de ingeniería social',
+        isCorrect: true
       }
     ]
   },
   {
     question: '¿Qué comando se usa para ver nuestra ip en Kali linux?',
-    img: '',
+    img: 'https://media.istockphoto.com/photos/server-configuration-command-lines-on-a-monitor-picture-id619051530?k=20&m=619051530&s=612x612&w=0&h=AFf82Bak8mxfyTd1Nz3kWo00XWKSH_NB9O1QYFlltkM=',
     answers: [
       {
         text: 'ifconfig',
@@ -230,7 +230,7 @@ const questions = [
   },
   {
     question: '¿Qué payload se usa para acceder a un dispositivo Android?',
-    img: '',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI9Z-2OIP3X6XkhJbOdEnhU6RIcE2ltlh02g&usqp=CAU',
     answers: [
       {
         text: 'android/meterpreter/reverse_tcp',
@@ -249,7 +249,7 @@ const questions = [
         isCorrect: false
       }
     ]
-  }
+  },
 ];
 
 export default questions;

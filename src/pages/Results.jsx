@@ -41,7 +41,7 @@ function Results() {
             </span>
           </h2>
         </div>
-        <div className="p-0 lg:p-8 rounded-lg bg-zinc-900 mx-0 lg:mx-[500px] shadow-xl h-96 lg:h-[700px]">
+        <div className="overflow-y-auto relative p-0 lg:p-8 rounded-lg bg-zinc-900 mx-0 lg:mx-[500px] shadow-xl h-96 lg:h-[700px]">
           <div className="flex flex-col items-center lg:p-12 p-8">
             {results.length === 0 ? (
               <div className="flex flex-col items-center">
@@ -53,10 +53,10 @@ function Results() {
               <div>
                 {results.map((result) => (
                   <div
-                    className="grid grid-cols-2 w-56 lg:w-96 pb-6"
+                    className="grid grid-cols-3 w-56 lg:w-96 pb-6"
                     key={result.id}
                   >
-                    <span className="flex justify-start col-span-1">
+                    <span className="flex justify-start col-span-2">
                       <li className="text-xl lg:text-3xl font-bold text-white">
                         {result.name}
                       </li>

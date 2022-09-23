@@ -25,20 +25,20 @@ function Quiz() {
     e.target.classList.add(isCorrect ? 'bg-green-500' : 'bg-red-500');
     setTimeout(() => {
       if (currentQuestion === Questions.length - 1) {
+        // try {
+        //   supabase
+        //     .from('results')
+        //     .insert([{ name: player, result: showScore }])
+        //     .then((res) => {
+        //       console.log(res);
+        //     })
+        //     .catch((err) => {
+        //       console.log(err);
+        //     });
+        // } catch (err) {
+        //   console.log(err);
+        // }
         setIsFinished(true);
-        try {
-          supabase
-            .from('results')
-            .insert([{ name: player, result: showScore }])
-            .then((res) => {
-              console.log(res);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        } catch (err) {
-          console.log(err);
-        }
       } else {
         setCurrentQuestion(currentQuestion + 1);
         setTime(60);
@@ -57,6 +57,20 @@ function Quiz() {
       setWidth(1150);
     } else {
       setWidth(310);
+    }
+
+    if (isFinished) {
+      const fetchResults = async () => {
+        const { data, error } = await supabase
+          .from('results')
+          .insert([{ name: player, result: showScore }])
+          .then((res) => {
+            console.log(res);
+          });
+        if (error) console.log(error);
+        console.log(data);
+      };
+      fetchResults();
     }
 
     const interval = setInterval(() => {

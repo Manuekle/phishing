@@ -45,7 +45,9 @@ function Zphisher() {
           </h1>
           <div className=" bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
             <code className="text-white text-sm lg:text-xl">
-              $ git clone --depth=1 https://github.com/htr-tech/zphisher.git
+              <span className="text-zinc-500"># Clonar zphisher</span>
+              <br />$ git clone --depth=1
+              https://github.com/htr-tech/zphisher.git
             </code>
             <div className="lg:block hidden">
               <button

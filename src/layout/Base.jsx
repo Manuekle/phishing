@@ -10,6 +10,7 @@ import Zphisher from '../pages/Zphisher';
 import Seeker from '../pages/Seeker';
 import Metasploit from '../pages/Metasploit';
 import Quiz from '../pages/Quiz';
+import Results from '../pages/Results';
 
 import Footer from './Footer';
 
@@ -28,6 +29,7 @@ function Base() {
         <Seeker />
         <Metasploit />
         <Quiz />
+        <Results />
         <Footer />
       </div>
     </>

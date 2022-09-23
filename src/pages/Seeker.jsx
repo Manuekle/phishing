@@ -35,7 +35,8 @@ function Seeker() {
           </h1>
           <div className="overflow-x-auto w-[310px] no-scrollba lg:w-full bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
             <code className="text-white text-sm lg:text-xl">
-              $ git clone https://github.com/thewhiteh4t/seeker.git
+              <span className="text-zinc-500"># Clonar seeker</span>
+              <br />$ git clone https://github.com/thewhiteh4t/seeker.git
             </code>
             <div className="lg:block hidden">
               <button
@@ -79,7 +80,8 @@ function Seeker() {
           </div>
           <div className=" bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
             <code className="text-white text-sm lg:text-xl">
-              $ python3 seeker.py
+              <span className="text-zinc-500"># Ejecutar seeker</span>
+              <br />$ python3 seeker.py
             </code>
             <div className="lg:block hidden">
               <button

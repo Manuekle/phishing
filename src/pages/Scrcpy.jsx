@@ -32,7 +32,8 @@ function Scrcpy() {
           </h1>
           <div className=" bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
             <code className="text-white text-sm lg:text-xl">
-              $ sudo apt-get install scrcpy
+              <span className="text-zinc-500"># Instalar scrcpy</span>
+              <br />$ sudo apt-get install scrcpy
             </code>
             <div className="lg:block hidden">
               <button

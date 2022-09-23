@@ -3,6 +3,8 @@ import Questions from '../questions';
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 
+import { supabase } from '../clients';
+
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(0);
@@ -11,6 +13,8 @@ function Quiz() {
   const [running, setRunning] = useState(false);
   const [answersShow, setAnswersShow] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const [player, setPlayer] = useState('');
 
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
@@ -22,9 +26,22 @@ function Quiz() {
     setTimeout(() => {
       if (currentQuestion === Questions.length - 1) {
         setIsFinished(true);
+        try {
+          supabase
+            .from('results')
+            .insert([{ name: player, result: showScore }])
+            .then((res) => {
+              console.log(res);
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } catch (err) {
+          console.log(err);
+        }
       } else {
-        if (isCorrect) setTime(60);
         setCurrentQuestion(currentQuestion + 1);
+        setTime(60);
       }
     }, 500);
   }
@@ -37,7 +54,7 @@ function Quiz() {
     }
 
     if (window.innerWidth > 1000) {
-      setWidth(1100);
+      setWidth(1150);
     } else {
       setWidth(310);
     }
@@ -69,7 +86,7 @@ function Quiz() {
               Que tan bueno eres en Phishing! <br />
             </h1>
           </div>
-          <div className="rounded-lg border-[3px] p-0 lg:p-0 mx-0 lg:mx-56">
+          <div className="rounded-lg bg-zinc-900 p-0 lg:p-0 mx-0 lg:mx-56">
             <div className="flex justify-center relative">
               <Confetti
                 tweenDuration={90000}
@@ -148,7 +165,7 @@ function Quiz() {
                 Obtuviste {showScore} de {Questions.length}
               </p>
               <button
-                className="py-3 px-12 mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl hover:bg-zinc-900 text-white tracking-tighter"
+                className="py-3 px-12 mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-800/80 rounded-xl hover:bg-zinc-800 text-white tracking-tighter"
                 onClick={() => (window.location.href = '/')}
               >
                 <a className="font-bold text-md lg:text-2xl text-white">
@@ -188,7 +205,7 @@ function Quiz() {
               Que tan bueno eres en Phishing! <br />
             </h1>
           </div>
-          <div className="rounded-lg border-[3px] p-0 lg:p-8 mx-0 lg:mx-56">
+          <div className="rounded-lg bg-zinc-900 p-0 lg:p-8 mx-0 lg:mx-56">
             <div className="flex flex-col lg:flex-row lg:justify-between items-center p-6 lg:p-12">
               <h1 className="text-center text-3xl font-black text-white sm:text-6xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
@@ -225,7 +242,7 @@ function Quiz() {
                       setCurrentQuestion(currentQuestion + 1);
                     }
                   }}
-                  className="py-3 w-56 mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl hover:bg-zinc-900 text-white tracking-tighter"
+                  className="py-3 w-56 mt-8 shadow-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-800/80 rounded-xl hover:bg-zinc-800 text-white tracking-tighter"
                 >
                   <a className="font-bold text-md lg:text-2xl text-white">
                     {currentQuestion === Questions.length - 1
@@ -256,7 +273,7 @@ function Quiz() {
           </h1>
         </div>
         {open ? (
-          <div className="p-0 lg:p-8 rounded-lg border-[3px] mx-0 lg:mx-56">
+          <div className="p-0 lg:p-8 rounded-lg bg-zinc-900 mx-0 lg:mx-56">
             <div className="flex flex-col lg:flex-row lg:justify-between items-center lg:p-0 p-4">
               <h1 className="text-md lg:text-3xl font-bold text-white lg:pt-0 pt-4">
                 Pregunta{' '}
@@ -268,7 +285,7 @@ function Quiz() {
                   <>
                     {currentQuestion + 1 === 12 ? (
                       <button
-                        className="mt-2 lg:mt-0 py-3 lg:py-4 px-4 lg:px-4 text-sm lg:text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl shadow-xl hover:bg-zinc-900 text-white tracking-tighter"
+                        className="mt-2 lg:mt-0 py-3 lg:py-4 px-4 lg:px-4 text-sm lg:text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-800/80 rounded-xl shadow-xl hover:bg-zinc-800 text-white tracking-tighter"
                         onClick={() => {
                           setIsFinished(true);
                         }}
@@ -277,7 +294,7 @@ function Quiz() {
                       </button>
                     ) : (
                       <button
-                        className="mt-2 lg:mt-0 py-3 lg:py-4 px-4 lg:px-4 text-sm lg:text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl shadow-xl hover:bg-zinc-900 text-white tracking-tighter"
+                        className="mt-2 lg:mt-0 py-3 lg:py-4 px-4 lg:px-4 text-sm lg:text-xl font-bold bg-black shadow-black/50 hover:shadow-zinc-800/80 rounded-xl shadow-xl hover:bg-zinc-800 text-white tracking-tighter"
                         onClick={() => {
                           setTime(60);
                           setRunning(false);
@@ -306,7 +323,7 @@ function Quiz() {
                   <img
                     src={Questions[currentQuestion].img}
                     alt="img"
-                    className="border rounded-lg p-2 mt-8 object-cover"
+                    className="border-[4px] border-zinc-800 rounded-lg p-2 mt-8 object-cover"
                   />
                 )}
               </div>
@@ -317,7 +334,7 @@ function Quiz() {
                     key={answer.text}
                     disabled={running}
                     onClick={(e) => handleAnswerSubmit(answer.isCorrect, e)}
-                    className="w-full text-white py-2 px-4 lg:px-4 text-xs lg:text-xl font-bold lg:py-3 rounded-lg border-[3px] shadow-md"
+                    className="w-full text-white py-2 px-4 lg:px-4 text-xs lg:text-xl font-bold lg:py-3 rounded-lg bg-zinc-800 shadow-md"
                   >
                     {answer.text}
                   </button>
@@ -326,7 +343,7 @@ function Quiz() {
             </div>
           </div>
         ) : (
-          <div className="p-0 lg:p-8 rounded-lg border-[3px] mx-0 lg:mx-56">
+          <div className="p-0 lg:p-8 rounded-lg bg-zinc-900 mx-0 lg:mx-56">
             <div className="flex flex-col items-center lg:p-12 p-8">
               <h1 className="text-center text-3xl font-black text-white sm:text-6xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
@@ -339,14 +356,21 @@ function Quiz() {
               <h1 className="text-md lg:text-2xl text-center font-bold text-white pt-4">
                 Demuestra lo que sabes!
               </h1>
-
+              <input
+                type="text"
+                maxLength="10"
+                placeholder="Dime tu nombre"
+                className="text-black text-sm lg:text-2xl placeholder:text-zinc-500 rounded-lg px-4 py-3 lg:px-6 lg:py-4 mt-4 lg:mt-8 object-cover outline-none bg-zinc-200 shadow-lg shadow-zinc-200/30"
+                onChange={(e) => setPlayer(e.target.value)}
+              />
               <button
+                disabled={player === ''}
                 onClick={() => {
                   setOpen(true);
                   setTime(60);
                   setRunning(false);
                 }}
-                className="mt-8 py-3 px-12 bg-black shadow-black/50 hover:shadow-zinc-900/80 rounded-xl shadow-xl hover:bg-zinc-900"
+                className="mt-8 py-3 px-12 bg-black shadow-black/50 hover:shadow-zinc-800/80 rounded-xl shadow-xl hover:bg-zinc-800"
               >
                 <a className="font-bold text-md lg:text-2xl text-white tracking-tighter">
                   Iniciar!

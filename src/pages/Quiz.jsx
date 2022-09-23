@@ -60,17 +60,32 @@ function Quiz() {
     }
 
     if (isFinished) {
-      const fetchResults = async () => {
-        const { data, error } = await supabase
+      // const fetchResults = async () => {
+      //   const { data, error } = await supabase
+      //     .from('results')
+      //     .insert([{ name: player, result: showScore }])
+      //     .then((res) => {
+      //       console.log(res);
+      //       setPlayer('');
+      //       setShowScore(0);
+      //     });
+      //   if (error) console.log(error);
+      //   console.log(data);
+      // };
+      // fetchResults();
+      try {
+        supabase
           .from('results')
           .insert([{ name: player, result: showScore }])
           .then((res) => {
             console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
           });
-        if (error) console.log(error);
-        console.log(data);
-      };
-      fetchResults();
+      } catch (err) {
+        console.log(err);
+      }
     }
 
     const interval = setInterval(() => {

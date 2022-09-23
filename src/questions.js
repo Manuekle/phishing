@@ -207,7 +207,7 @@ const questions = [
     ]
   },
   {
-    question: '¿Qué comando se usa para ver nuestra ip?',
+    question: '¿Qué comando se usa para ver nuestra ip en Kali linux?',
     img: '',
     answers: [
       {

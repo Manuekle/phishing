@@ -45,7 +45,7 @@ function Practice() {
             Se la puede definir como una falencia o debilidad en un sistema
             informático, el cual coloca en riesgo la seguridad de los activos de
             la información y compromete la integridad, confidencialidad y
-            disponibilidad de la información; por lo tanto, es importante
+            disponibilidad de la información, por lo tanto, es importante
             reconocer, actuar y eliminar la vulnerabilidad encontrada en el
             menor tiempo posible.
           </h1>

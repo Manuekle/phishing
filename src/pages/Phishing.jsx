@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import Gif from '../assets/zs.gif';
 
+import Tips from './Tips';
+
 function Phishing() {
   const phishing =
     'https://cdn3d.iconscout.com/3d/premium/thumb/incognito-mode-5353063-4468795.png';
@@ -17,23 +19,6 @@ function Phishing() {
   const hacker =
     'https://cdn3d.iconscout.com/3d/premium/thumb/hackers-5695025-4771082.png';
 
-  const gmail =
-    'https://cdn3d.iconscout.com/3d/free/thumb/gmail-2950163-2447924.png';
-
-  const web =
-    'https://cdn3d.iconscout.com/3d/premium/thumb/web-search-3473218-2910808@0.png';
-
-  const card =
-    'https://cdn3d.iconscout.com/3d/premium/thumb/credit-cards-5569220-4655953.png';
-
-  const ads =
-    'https://cdn3d.iconscout.com/3d/premium/thumb/paid-advertisement-4085853-3379650.png';
-
-  const wifi =
-    'https://cdn3d.iconscout.com/3d/premium/thumb/free-wifi-5663937-4719921.png';
-
-  const windows =
-    'https://cdn3d.iconscout.com/3d/free/thumb/windows-5562368-4642713.png';
   return (
     <>
       <section className="w-full pt-10 lg:pt-44 mx-auto lg:max-w-7xl mb-20 lg:mb-56">
@@ -68,7 +53,7 @@ function Phishing() {
           <div className="pt-0 lg:pt-10 px-8 lg:px-0">
             <h1 className="text-white font-normal text-lg lg:text-3xl text-justify">
               A través del <span className="font-bold">phishing</span> se lanza
-              un ataque con fines fraudolentos a millones de usuarios,
+              un ataque con fines fraudulentos a millones de usuarios,
               principalmente por medio del{' '}
               <span className="font-bold">correo electrónico</span>. De todos
               ellos algunos caen en la trampa y entregan sus datos.
@@ -87,7 +72,7 @@ function Phishing() {
               </div>
               <div className="flex justify-center items-start">
                 <div className="flex flex-col gap-8">
-                  <h1 className="font-bold text-6xl text-white underline">
+                  <h1 className="font-bold text-6xl text-white ">
                     Algunos engaños que atraen incautos
                   </h1>
                   <div className="grid grid-cols-3 items-center">
@@ -130,7 +115,7 @@ function Phishing() {
               </div>
               <div className="flex justify-center items-start">
                 <div className="flex flex-col gap-8 items-center">
-                  <h1 className="font-bold text-2xl text-white text-center underline">
+                  <h1 className="font-bold text-2xl text-white text-center ">
                     Algunos engaños que atraen incautos
                   </h1>
                   <span className="flex justify-start col-span-1">
@@ -189,7 +174,7 @@ function Phishing() {
             <div className="grid grid-cols-8 gap-12 pt-12">
               <div className="col-span-7 flex justify-start items-start">
                 <div className="flex flex-col gap-8">
-                  <h1 className="font-bold text-6xl text-white underline">
+                  <h1 className="font-bold text-6xl text-white ">
                     ¿Por qué lo hacen?
                   </h1>
                   <div className="col-span-2 flex flex-col gap-4 border-[4px] rounded-lg p-4">
@@ -233,7 +218,7 @@ function Phishing() {
               </div>
               <div className="flex justify-center items-start">
                 <div className="flex flex-col gap-8 items-center">
-                  <h1 className="font-bold text-2xl text-white text-center underline">
+                  <h1 className="font-bold text-2xl text-white text-center ">
                     ¿Por qué lo hacen?
                   </h1>
                   <div className="col-span-2 flex flex-col gap-4 border-[4px] rounded-lg p-4">
@@ -269,7 +254,7 @@ function Phishing() {
               </div>
               <div className="flex justify-center items-start">
                 <div className="flex flex-col gap-8">
-                  <h1 className="font-bold text-6xl text-white underline">
+                  <h1 className="font-bold text-6xl text-white ">
                     Variantes de Phishing
                   </h1>
                   <div className="flex flex-row gap-4">
@@ -286,10 +271,10 @@ function Phishing() {
                           </h1>
                         </span>
                       </div>
-                      <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
+                      <h1 className="font-bold text-white text-2xl text-center pb-8 ">
                         Por Correo Electrónico
                       </h1>
-                      <p className="font-normal text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-justify px-4">
                         Contiene enlaces que redirigen a sitios falsos o tienen
                         archivos adjuntos que contienen malware.
                       </p>
@@ -307,10 +292,10 @@ function Phishing() {
                           </h1>
                         </span>
                       </div>
-                      <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
+                      <h1 className="font-bold text-white text-2xl text-center pb-8 ">
                         Vishing
                       </h1>
-                      <p className="font-normal text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-justify px-4">
                         Se realiza a través de llamadas telefónicas, con el
                         objetivo de obtener información personal o bancaria.
                       </p>
@@ -328,10 +313,10 @@ function Phishing() {
                           </h1>
                         </span>
                       </div>
-                      <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
+                      <h1 className="font-bold text-white text-2xl text-center pb-8 ">
                         Smishing
                       </h1>
-                      <p className="font-normal text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-justify px-4">
                         Se realiza a través de mensajes de texto, con el
                         objetivo de que la victima haga click en un enlace.
                       </p>
@@ -349,10 +334,10 @@ function Phishing() {
                           </h1>
                         </span>
                       </div>
-                      <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
+                      <h1 className="font-bold text-white text-2xl text-center pb-8 ">
                         Por Redes Sociales
                       </h1>
-                      <p className="font-normal text-white text-xl text-center">
+                      <p className="font-normal text-white text-xl text-justify px-4">
                         Creación de perfiles falsos y se utilizan para engañar a
                         las victimas.
                       </p>
@@ -362,6 +347,7 @@ function Phishing() {
               </div>
             </div>
           </div>
+
           <div className="lg:hidden block pt-0 lg:pt-10 px-8 lg:px-0">
             <div className="flex flex-col gap-8">
               <div className="relative">
@@ -375,90 +361,90 @@ function Phishing() {
               </div>
               <div className="flex justify-center items-start">
                 <div className="flex flex-col gap-8 items-center">
-                  <h1 className="font-bold text-2xl text-white text-center underline">
+                  <h1 className="font-bold text-2xl text-white text-center">
                     Variantes de Phishing
                   </h1>
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col w-[300px] border-[3px] p-4 rounded-lg">
-                      <div className="relative">
+                      <div className="flex items-center justify-center relative">
                         <img
                           src={email}
                           alt="email"
-                          className="relative object-cover w-72"
+                          className="relative object-cover w-[150px]"
                         />
-                        <span className="absolute rounded-full backdrop-saturate-50 bg-zinc-500/30 backdrop-blur-sm bottom-10 left-[150px]">
-                          <h1 className="font-bold text-3xl text-white py-4 px-[26px]">
+                        <span className="absolute rounded-full backdrop-saturate-50 bg-zinc-500/30 backdrop-blur-sm bottom-8 left-[150px]">
+                          <h1 className="font-bold text-xl text-white py-2 px-[18px]">
                             1
                           </h1>
                         </span>
                       </div>
-                      <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
+                      <h1 className="font-bold text-white text-xl text-center pb-4 ">
                         Por Correo Electrónico
                       </h1>
-                      <p className="font-normal text-white text-xl text-center">
+                      <p className="font-normal text-white text-sm text-justify px-6">
                         Contiene enlaces que redirigen a sitios falsos o tienen
                         archivos adjuntos que contienen malware.
                       </p>
                     </div>
                     <div className="flex flex-col w-[300px] border-[3px] p-4 rounded-lg">
-                      <div className="relative">
+                      <div className="flex items-center justify-center relative">
                         <img
                           src={phone}
                           alt="phone"
-                          className="relative object-cover w-72"
+                          className="relative object-cover w-[150px]"
                         />
-                        <span className="absolute rounded-full backdrop-saturate-50 bg-zinc-500/30 backdrop-blur-sm bottom-10 left-[150px]">
-                          <h1 className="font-bold text-3xl text-white py-4 px-[26px]">
+                        <span className="absolute rounded-full backdrop-saturate-50 bg-zinc-500/30 backdrop-blur-sm bottom-6 left-[140px]">
+                          <h1 className="font-bold text-xl text-white py-2 px-[16px]">
                             2
                           </h1>
                         </span>
                       </div>
-                      <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
+                      <h1 className="font-bold text-white text-xl text-center pb-4 ">
                         Vishing
                       </h1>
-                      <p className="font-normal text-white text-xl text-center">
+                      <p className="font-normal text-white text-sm text-justify px-6">
                         Se realiza a través de llamadas telefónicas, con el
                         objetivo de obtener información personal o bancaria.
                       </p>
                     </div>
                     <div className="flex flex-col w-[300px] border-[3px] p-4 rounded-lg">
-                      <div className="relative">
+                      <div className="flex items-center justify-center relative">
                         <img
                           src={sms}
                           alt="sms"
-                          className="relative object-cover w-72"
+                          className="relative object-cover w-[150px]"
                         />
-                        <span className="absolute rounded-full backdrop-saturate-50 bg-zinc-500/30 backdrop-blur-sm bottom-10 left-[150px]">
-                          <h1 className="font-bold text-3xl text-white py-4 px-[26px]">
+                        <span className="absolute rounded-full backdrop-saturate-50 bg-zinc-500/30 backdrop-blur-sm bottom-6 left-[135px]">
+                          <h1 className="font-bold text-xl text-white py-2 px-[16px]">
                             3
                           </h1>
                         </span>
                       </div>
-                      <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
+                      <h1 className="font-bold text-white text-xl text-center pb-4 ">
                         Smishing
                       </h1>
-                      <p className="font-normal text-white text-xl text-center">
+                      <p className="font-normal text-white text-sm text-justify px-6">
                         Se realiza a través de mensajes de texto, con el
                         objetivo de que la victima haga click en un enlace.
                       </p>
                     </div>
                     <div className="flex flex-col w-[300px] border-[3px] p-4 rounded-lg">
-                      <div className="relative">
+                      <div className="flex items-center justify-center relative">
                         <img
                           src={hacker}
                           alt="hacker"
-                          className="relative object-cover w-72"
+                          className="relative object-cover w-[150px]"
                         />
-                        <span className="absolute rounded-full backdrop-saturate-50 bg-zinc-500/30 backdrop-blur-sm bottom-10 left-[150px]">
-                          <h1 className="font-bold text-3xl text-white py-4 px-[26px]">
+                        <span className="absolute rounded-full backdrop-saturate-50 bg-zinc-500/30 backdrop-blur-sm bottom-8 left-[140px]">
+                          <h1 className="font-bold text-xl text-white py-2 px-[16px]">
                             4
                           </h1>
                         </span>
                       </div>
-                      <h1 className="font-bold text-white text-2xl text-center pb-8 underline">
+                      <h1 className="font-bold text-white text-xl text-center pb-4 ">
                         Por Redes Sociales
                       </h1>
-                      <p className="font-normal text-white text-xl text-center">
+                      <p className="font-normal text-white text-sm text-justify px-6">
                         Creación de perfiles falsos y se utilizan para engañar a
                         las victimas.
                       </p>
@@ -468,106 +454,13 @@ function Phishing() {
               </div>
             </div>
           </div>
-
-          <div className="lg:hidden block pt-0 lg:pt-10 px-8 lg:px-0"></div>
         </div>
       </section>
       <section
         id="jigsaw"
         className="relative w-full bg-gradient-to-r from-shad-yellow-100 via-shad-yellow-100 to-shad-orange-100 pb-24"
       >
-        <div className="lg:flex lg:justify-center">
-          <div className="flex flex-col pt-8 lg:pt-20 px-8 lg:px-0">
-            <h1 className="font-bold text-zinc-800 text-2xl lg:text-5xl text-center uppercase tracking-wider">
-              Algunos tips para evitar ser victima de Phishing
-            </h1>
-            <div className="grid grid-cols-6 lg:gap-20 gap-12 pt-8 lg:pt-40">
-              <div className="flex flex-col items-center col-span-6 lg:col-span-1 lg:w-[300px] border-black rounded-lg border-[3px] p-8 lg:border-none lg:p-0">
-                <img
-                  src={gmail}
-                  alt="gmail"
-                  className="relative object-cover w-56 lg:w-72"
-                />
-                <h1 className="text-xl lg:text-2xl text-center text-black font-bold">
-                  Correos electrónicos dudosos
-                </h1>
-                <p className="pt-2 text-black text-lg lg:text-xl font-normal text-center lg:text-justify">
-                  No abras correos electrónicos que no esperes o que no hayas
-                  solicitado.
-                </p>
-              </div>
-              <div className="flex flex-col items-center col-span-6 lg:col-span-1 lg:w-[300px] border-black rounded-lg border-[3px] p-8 lg:border-none lg:p-0 pt-10">
-                <img
-                  src={web}
-                  alt="web"
-                  className="relative object-cover w-56 lg:w-72"
-                />
-                <h1 className="text-2xl text-center text-black font-bold pt-8">
-                  Enlaces Sospechosos
-                </h1>
-                <p className="pt-2 lg:pt-[34px] text-black text-xl font-normal text-center lg:text-justify">
-                  No hagas click en enlaces sospechosos, si no estas seguro de
-                  su procedencia, no lo abras.
-                </p>
-              </div>
-              <div className="flex flex-col items-center col-span-6 lg:col-span-1 lg:w-[300px] border-black rounded-lg border-[3px] p-8 lg:border-none lg:p-0">
-                <img
-                  src={card}
-                  alt="card"
-                  className="relative object-cover w-56 lg:w-72"
-                />
-                <h1 className="text-2xl text-center text-black font-bold">
-                  Verifica tus cuentas bancarias
-                </h1>
-                <p className="pt-2 text-black text-xl font-normal text-center lg:text-justify">
-                  Hazlo constantemente, para evitar que te roben tu dinero.
-                </p>
-              </div>
-              <div className="flex flex-col items-center col-span-6 lg:col-span-1 lg:w-[300px] border-black rounded-lg border-[3px] p-8 lg:border-none lg:p-0">
-                <img
-                  src={ads}
-                  alt="ads"
-                  className="relative object-cover w-56 lg:w-72"
-                />
-                <h1 className="text-2xl text-center text-black font-bold">
-                  Anuncios maliciosos o malvertising
-                </h1>
-                <p className="pt-2 text-black text-xl font-normal text-center lg:text-justify">
-                  Estos anuncios pueden contener enlaces maliciosos, no los
-                  abras.
-                </p>
-              </div>
-              <div className="flex flex-col items-center col-span-6 lg:col-span-1 lg:w-[300px] border-black rounded-lg border-[3px] p-8 lg:border-none lg:p-0">
-                <img
-                  src={wifi}
-                  alt="wifi"
-                  className="relative object-cover w-56 lg:w-72"
-                />
-                <h1 className="text-2xl text-center text-black font-bold">
-                  Redes Wifi publicas o desconocidas
-                </h1>
-                <p className="pt-2 text-black text-xl font-normal text-center lg:text-justify">
-                  No te conectes a redes wifi publicas o desconocidas, ya que
-                  pueden ser falsas y robar tus datos.
-                </p>
-              </div>
-              <div className="flex flex-col items-center col-span-6 lg:col-span-1 lg:w-[300px] border-black rounded-lg border-[3px] p-8 lg:border-none lg:p-0">
-                <img
-                  src={windows}
-                  alt="windows"
-                  className="relative object-cover w-56 lg:w-72"
-                />
-                <h1 className="text-2xl text-center text-black font-bold">
-                  Apliacaciones falsas o maliciosas
-                </h1>
-                <p className="pt-2 text-black text-xl font-normal text-center lg:text-justify">
-                  No descargues aplicaciones falsas o maliciosas, ya que pueden
-                  robar tus datos.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Tips />
       </section>
     </>
   );

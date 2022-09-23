@@ -21,7 +21,7 @@ function Tips() {
   return (
     <>
       <div className="px-8 lg:px-0">
-        <h1 className="pt-20 pb-10 font-bold text-zinc-800 text-2xl lg:text-5xl text-center uppercase tracking-widest">
+        <h1 className="pt-20 pb-10 lg:pb-24 font-bold text-zinc-800 text-2xl lg:text-5xl text-center uppercase tracking-widest">
           Algunos tips para evitar ser victima de Phishing
         </h1>
         <div className="grid grid-cols-3 gap-8 lg:gap-16 lg:px-56">

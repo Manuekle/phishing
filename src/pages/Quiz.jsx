@@ -105,6 +105,30 @@ function Quiz() {
             </h1>
           </div>
           <div className="rounded-lg bg-zinc-900 p-0 lg:p-0 mx-0 lg:mx-56">
+            <div className="flex justify-center relative">
+              <Confetti
+                tweenDuration={90000}
+                // width={1150}
+                // height={400}
+                width={width}
+                height={height}
+                initialVelocityY={20}
+                numberOfPieces={1000}
+                recycle={false}
+                // wind={0.1}
+                drawShape={(ctx) => {
+                  ctx.beginPath();
+                  for (let i = 0; i < 22; i++) {
+                    const angle = 0.35 * i;
+                    const x = (0.2 + 1.5 * angle) * Math.cos(angle);
+                    const y = (0.2 + 1.5 * angle) * Math.sin(angle);
+                    ctx.lineTo(x, y);
+                  }
+                  ctx.stroke();
+                  ctx.closePath();
+                }}
+              />
+            </div>
             <div className="relative flex flex-col items-center p-12">
               <h1 className="text-center text-3xl font-black text-white sm:text-6xl">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">
@@ -177,30 +201,7 @@ function Quiz() {
                 Ver respuestas
               </button>
             </div>
-            <div className="flex justify-center relative">
-              <Confetti
-                tweenDuration={90000}
-                // width={1150}
-                // height={400}
-                width={width}
-                height={height}
-                initialVelocityY={20}
-                numberOfPieces={1000}
-                recycle={false}
-                // wind={0.1}
-                drawShape={(ctx) => {
-                  ctx.beginPath();
-                  for (let i = 0; i < 22; i++) {
-                    const angle = 0.35 * i;
-                    const x = (0.2 + 1.5 * angle) * Math.cos(angle);
-                    const y = (0.2 + 1.5 * angle) * Math.sin(angle);
-                    ctx.lineTo(x, y);
-                  }
-                  ctx.stroke();
-                  ctx.closePath();
-                }}
-              />
-            </div>
+
           </div>
         </div>
       </section>

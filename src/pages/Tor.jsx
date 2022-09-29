@@ -45,9 +45,9 @@ function Tor() {
                             style={{
                                 filter: 'blur(100px)'
                             }}
-                            className="p-28 lg:p-56 bg-purple-400 top-[150px] lg:top-[135px] absolute rounded-full left-[36px] lg:left-[380px] "
+                            className="p-28 lg:p-56 bg-purple-400 top-[100px] lg:top-[135px] absolute rounded-full left-[55px] lg:left-[380px] "
                         ></div>
-                        <TorBrowser className="relative lg:w-[800px] w-[400px] h-[400px] lg:h-[500px]" />
+                        <TorBrowser className="relative lg:w-[800px] w-[400px] h-[200px] lg:h-[500px]" />
                     </span>
 
                     <h1 className="text-lg lg:text-3xl font-normal text-justify lg:text-center text-white pb-5">

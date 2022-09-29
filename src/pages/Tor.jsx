@@ -77,7 +77,7 @@ function Tor() {
                             </button>
                         </div>
                     </div>
-                    <div className=" bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
+                    <div className="overflow-x-auto w-[310px] no-scrollba lg:w-full bg-zinc-900 p-4 lg:px-12 rounded-lg justify-between flex items-start shadow-lg">
                         <code className="text-white text-sm lg:text-xl">
                             <span className="text-zinc-500">
                                 # Instalación de Kalitorify para cambiar la IP de forma automática

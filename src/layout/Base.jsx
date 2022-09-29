@@ -9,6 +9,8 @@ import Scrcpy from '../pages/Scrcpy';
 import Zphisher from '../pages/Zphisher';
 import Seeker from '../pages/Seeker';
 import Metasploit from '../pages/Metasploit';
+import Tor from '../pages/Tor';
+
 import Quiz from '../pages/Quiz';
 import Results from '../pages/Results';
 
@@ -28,6 +30,7 @@ function Base() {
         <Zphisher />
         <Seeker />
         <Metasploit />
+        <Tor />
         <Quiz />
         <Results />
         <Footer />

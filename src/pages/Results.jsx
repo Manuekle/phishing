@@ -60,7 +60,7 @@ function Results() {
                     key={result.id}
                   >
                     <span className="flex justify-start col-span-2">
-                      <li className="text-xl lg:text-3xl font-bold text-white">
+                      <li className="text-xl lg:text-3xl font-bold text-white capitalize">
                         {result.name}
                       </li>
                     </span>
